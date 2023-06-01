@@ -4,5 +4,6 @@ sap.ui.define([
     "use strict";
 
     new Button({
-    });
+        text: "Hello World",
+    }).placeAt("content");
 });
