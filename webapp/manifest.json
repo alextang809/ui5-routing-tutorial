@@ -1,5 +1,39 @@
 {
     "sap.app": {
+        "title": "UI5 Routing Tutorial",
         "id": "ui5-routing-tutorial"
+    },
+    "routing": {
+        "config": {
+            "routerClass": "sap.m.routing.Router",
+            "viewType": "view",
+            "viewPath": "XML",
+            "path": "ui5-routing-tutorial.view",
+            "controlId": "app",
+            "controlAggregation": "pages"
+        },
+        "routes": [
+            {
+                "pattern": "",
+                "name": "overview",
+                "target": "overview"
+            },
+            {
+                "pattern": "detail/{videoItemPath}",
+                "name": "detail",
+                "target": "detail"
+            }
+        ],
+        "target": {
+            "overview": {
+                "id": "overview",
+                "name": "Overview"
+            },
+            "detail": {
+                "id": "detail",
+                "name": "Detail"
+            }
+        }
     }
+
 }
